@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Learning - Login</title>
+    <style>
+        /* Import Google Font */
+        @import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@300;400;500;600;700&display=swap");
+
+        body {
+            background: linear-gradient(135deg, #dfe9f5, #ffffff);
+            font-family: "Bai Jamjuree", sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: #333;
+        }
+
+        /* Centered wrapper styling */
+        .wrapper {
+            width: 100%;
+            max-width: 340px; /* Reduced width by 20px */
+            padding: 20px; /* Reduced padding by 10px */
+            background-color: #ffffff;
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1); /* Reduced shadow size */
+            border-radius: 8px; /* Slightly reduced border radius */
+            text-align: center;
+            animation: fadeIn 0.8s ease-in-out;
+            border: 1px solid #e0e0e0;
+        }
+
+        /* Heading styling */
+        h1 {
+            font-size: 24px; /* Reduced size by 2px */
+            color: #444;
+            margin-bottom: 10px; /* Reduced margin by 2px */
+        }
+
+        h4 {
+            font-size: 16px; /* Maintained size for consistency */
+            color: #666;
+            margin-bottom: 14px; /* Reduced margin by 4px */
+        }
+
+        /* Form styling */
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px; /* Reduced gap by 2px */
+        }
+
+        input, select {
+            padding: 10px; /* Reduced padding by 2px */
+            border: 1px solid #ddd;
+            border-radius: 8px; /* Slightly reduced border radius */
+            font-size: 14px; /* Reduced font size by 1px */
+            width: 100%;
+            box-sizing: border-box;
+            transition: border-color 0.3s, box-shadow 0.3s;
+            background-color: #f9f9f9;
+        }
+
+        input[type="file"] {
+            padding: 4px; /* Consistent with other inputs */
+        }
+
+        input:focus, select:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 4px rgba(0, 123, 255, 0.3); /* Reduced shadow size */
+            outline: none;
+            background-color: #ffffff;
+        }
+
+        /* Button styling */
+        button {
+            padding: 8px 14px; /* Reduced padding by 2px */
+            background-color: #007bff;
+            border: none;
+            border-radius: 8px; /* Slightly reduced border radius */
+            color: #ffffff;
+            font-size: 14px; /* Reduced font size by 1px */
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+            font-weight: 500;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        /* Forgot Password styling */
+        .recover {
+            margin-bottom: 14px; /* Reduced margin by 4px */
+        }
+
+        .recover a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .recover a:hover {
+            color: #0056b3;
+        }
+
+        /* Membership styling */
+        .member {
+            margin-top: 14px; /* Reduced margin by 4px */
+            font-size: 12px; /* Reduced font size by 1px */
+        }
+
+        .member a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .member a:hover {
+            color: #0056b3;
+        }
+
+        /* Animation for fade-in effect */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Login Page -->
+    <div class="wrapper">
+        <h1>Smart Learning</h1>
+        <h4>Login</h4>
+        <form action="login.php" method="post">
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <div class="recover">
+                <a href="#">Forgot Password?</a>
+            </div>
+            <button type="submit">Login</button>
+        </form>
+        <div class="member"> 
+            Not a member? <a href="./index.html">Register Now</a>
+        </div>
+    </div>
+</body>
+</html>
